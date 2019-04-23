@@ -1,3 +1,4 @@
+#!/usr/bin/python
 # -*- coding: utf-8 -*-
 
 import pygame
@@ -24,10 +25,7 @@ UP = 0
 DOWN = 1
 LEFT = 2
 RIGHT = 3
-# LEFTUP = 4
-# RIGHTUP = 5
-# LEFTDOWN = 6
-# RIGHTDOWN = 7
+
 
 # 类型
 SMALL = 0
@@ -144,5 +142,4 @@ h = [-24, SCREEN_HEIGHT]
 enemies = pygame.sprite.Group()
 enemy_frequency = 0
 enemy_num = 0
-# NUMBER = [300, 350, 400, 450, 500, 800]
 NUMBER = [20, 20, 20, 20, 20, 50]

@@ -1,3 +1,4 @@
+#!/usr/bin/python
 # -*- coding: utf-8 -*-
 
 from setting import *
@@ -42,7 +43,6 @@ def start():
 
 
 # 方块产生频率
-
 def check():
     global enemy_frequency
     enemy_frequency += 1
@@ -324,9 +324,8 @@ def run():
                 pygame.quit()
                 exit()
 
-            # 是否再来
 
-
+# 是否再来
 def again():
     global running
 
