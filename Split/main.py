@@ -5,7 +5,7 @@ from setting import *
 import random
 
 
-# 开始菜单
+# start
 def start():
     global status
     menu_music.play()
@@ -42,7 +42,7 @@ def start():
             exit()
 
 
-# 方块产生频率
+# freq
 def check():
     global enemy_frequency
     enemy_frequency += 1
@@ -50,7 +50,7 @@ def check():
         enemy_frequency = 0
 
 
-# 产生方块
+# produce
 def produce_l1():
     global enemy
     if enemy_frequency % 18 == 0:
@@ -198,14 +198,14 @@ def generate():
         produce_l6()
 
 
-# 增加方块
+# add enemy
 def add(n):
     global enemies, enemy_num
     enemies.add(n)
     enemy_num += 1
 
 
-# 分裂
+# split
 def split():
     global enemies
     for i in enemies:
@@ -241,7 +241,7 @@ def split():
                 i.change()
 
 
-# 移动方块
+# enemy move
 def move():
     global running, player, enemies
     for i in enemies:
@@ -253,7 +253,7 @@ def move():
             enemies.remove(i)
 
 
-# 初始化
+# init
 def init():
     global level, player, enemies, enemy_num
     # level = 1
@@ -262,7 +262,7 @@ def init():
     enemy_num = 0
 
 
-# 游戏循环
+# game
 def run():
     global running, level, enemy_num, Pass
     menu_music.stop()
@@ -270,7 +270,6 @@ def run():
     init()
     i = 0
     while running:
-        # 控制游戏最大帧率为60
         clock.tick(FPS)
 
         # level up
@@ -306,9 +305,8 @@ def run():
         # update
         pygame.display.update()
 
-        # 监听键盘事件
+        # press keyboard
         key_pressed = pygame.key.get_pressed()
-        # 若玩家被击中，则无效
         if not player.is_hit:
             if key_pressed[K_w] or key_pressed[K_UP]:
                 player.up()
@@ -325,7 +323,7 @@ def run():
                 exit()
 
 
-# 是否再来
+# again?
 def again():
     global running
 
@@ -345,7 +343,7 @@ def again():
     no_rect = no_surf.get_rect(center=(700, 500))
     screen.blit(no_surf, no_rect)
 
-    # 更新屏幕
+    # clear screen
     pygame.display.update()
 
     while not running:
@@ -362,7 +360,7 @@ def again():
                     running = True
 
 
-# 通关
+# pass
 def pass_game():
     global running
 
@@ -382,7 +380,7 @@ def pass_game():
     no_rect = no_surf.get_rect(center=(700, 500))
     screen.blit(no_surf, no_rect)
 
-    # 更新屏幕
+    # clear
     pygame.display.update()
 
     while not running:
@@ -399,7 +397,7 @@ def pass_game():
                     running = True
 
 
-# 游戏结束否
+# end?
 def over():
     pygame.mixer.music.stop()
     clock.tick(FPS)
@@ -409,7 +407,7 @@ def over():
         again()
 
 
-# 主函数
+# main
 def main():
     start()
     while running:
