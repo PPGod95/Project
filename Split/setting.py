@@ -14,7 +14,7 @@ FPS = 60
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
 
-# 游戏状态
+# status
 MENU = 0
 START = 1
 EXIT = 2
