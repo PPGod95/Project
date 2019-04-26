@@ -13,15 +13,15 @@ This is a project that make a simple avoid game based on AVENGER:
 
 (2) Move by click "UP, DOWN, LAFT, RIGHT" or "w, a, d, s";
 
-(3) The enemy have different speeds and different split times. The movement and splitting of the squares are only four directions.
+(3) The enemy have different speeds and different split times. The movement and splitting of the squares are only four directions;
 
-(4) End when player touched by enemy.
+(4) End when player touched by enemy or click "ESC".
 
 
 #Architecture Features
 
 
-Pygame.sprit.Sprit
+Pygame.sprite.Sprite
 
 
 #What I do
