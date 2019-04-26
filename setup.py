@@ -10,7 +10,7 @@ setup(name='Project',
       description='Python Distribution Utilities',
       version='1.0',
       author='Haoran Peng',
-      packages=find_packages('Split'),
-      package_dir={'': 'Split'},
-      py_modules=[splitext(basename(path))[0] for path in glob('Split/*.py')],
-     )
+      packages=find_packages('Project'),
+      package_dir={'': 'Project'},
+      py_modules=[splitext(basename(path))[0] for path in glob('Project/Split/*.py')], install_requires=['pygame']
+      )
